@@ -1,0 +1,41 @@
+<h1 class="text-center bg-success">
+    UPDATE PRODUCTS
+ </h1>
+ <div class="jumbotron">
+     <form action="" [formGroup]="addForm">
+         <label for="">Name</label>
+         <input type="text" class="form-control"  placeholder="Enter Your Product's Name" formControlName="product_name">
+         <div class="alert alert-danger" *ngIf="addForm.get('product_name')?.invalid && addForm.get('name')?.touched">
+             Invalid Name
+         </div>
+         <label for="">Category</label>
+         <select name=""  id="" class="form-control" formControlName="category">
+             <option value="Electronics" >Electronics</option>
+             <option value="Outfit">Outfit</option>
+             <option value="footwear">footwear</option>
+             <option value="Cosmetics">Cosmetics</option>
+        
+         </select>
+         <div class="alert alert-danger" *ngIf="addForm.get('category')?.invalid && addForm.get('category')?.touched">
+             Invalid Category
+         </div>
+         <label for="">Price</label>
+         <input type="number" class="form-control"  placeholder="Enter Price" formControlName="price">
+         <div class="alert alert-danger" *ngIf="addForm.get('price')?.invalid && addForm.get('price')?.touched">
+             Invalid Price
+         </div>
+         <!-- <label for="">Description</label>
+         <textarea class="form-control"  placeholder="Enter Description" formControlName="description">
+            <div class="alert alert-danger" *ngIf="addForm.get('description')?.invalid && addForm.get('description')?.touched">
+                Invalid Price
+            </div>
+         </textarea> -->
+         <label for="">Image</label>
+         previous: <img src="{{pro.image}}" height="300px" width="300px" alt="">
+         <input type="file" (change)="uploadImage($event)" class="form-control">
+         <div class="text-center">
+             <button class="btn btn-success" (click)="submitted()">Update</button>
+         </div>
+         
+     </form>
+ </div>

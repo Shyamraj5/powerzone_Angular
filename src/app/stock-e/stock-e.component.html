@@ -1,0 +1,19 @@
+<p>stock-e works!</p>
+<form [formGroup]="stockform" >
+    <div class="form-group">
+        <label for="product">Product Name:</label>
+        <input type="text" class="form-control"formControlName="product" required >
+    </div>
+    <div class="form-group">
+        <label for="stock-quantity">Stock Quantity:</label>
+        <input type="text" class="form-control"formControlName="stock_quantity" required>
+    </div>
+    <div class="form-group">
+        <label for="sold-quantity">Sold Quantity:</label>
+        <input type="text" class="form-control"  formControlName="sold_quantity" required>
+    </div>
+    <div>
+        <button  class="btn btn-primary" (click)="submitteds()">Add stock</button>
+    </div>
+    
+</form> 

@@ -3,14 +3,44 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { RegComponent } from './reg/reg.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { LogComponent } from './log/log.component';
+import { CartComponent } from './cart/cart.component';
+import { ComplaintComponent } from './complaint/complaint.component';
+import { ServiceComponent } from './service/service.component';
+import { AdminhomeComponent } from './adminhome/adminhome.component';
+import { AddComponent } from './add/add.component';
+import { EditComponent } from './edit/edit.component';
+import { InventoryComponent } from './inventory/inventory.component';
+import { StockEComponent } from './stock-e/stock-e.component';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RegComponent,
+    HomeComponent,
+    LogComponent,
+    CartComponent,
+    ComplaintComponent,
+    ServiceComponent,
+    AdminhomeComponent,
+    AddComponent,
+    EditComponent,
+    InventoryComponent,
+    StockEComponent,
+    
+    
+    
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,39 @@
+<h1 class="text-center bg-primary">
+   ADD PRODUCTS
+</h1>
+<div class="jumbotron">
+    <form action="" [formGroup]="proForm" (ngSubmit)="addPro()">
+        <label for="">Name</label>
+        <input type="text" class="form-control" formControlName="product_name" placeholder="Enter Your Product's Name">
+        <div class="alert alert-danger" *ngIf="proForm.get('name')?.invalid && proForm.get('name')?.touched">
+            Invalid Name
+        </div>
+        <label for="">Category</label>
+        <select name="" formControlName="category" id="" class="form-control">
+            <option value="Tubular">Tubular</option>
+            <option value="Automotive">Automotive</option>
+            <option value="Inverter">Inverter</option>
+            
+        </select>
+        <div class="alert alert-danger" *ngIf="proForm.get('category')?.invalid && proForm.get('category')?.touched">
+            Invalid Category
+        </div>
+        <label for="">Price</label>
+        <input type="number" class="form-control" formControlName="price" placeholder="Enter Price">
+        <div class="alert alert-danger" *ngIf="proForm.get('price')?.invalid && proForm.get('price')?.touched">
+            Invalid Price
+        </div>
+        <!-- <label for="">Description</label>
+        <textarea class="form-control" formControlName="description" placeholder="Enter Description">
+        <div class="alert alert-danger" *ngIf="proForm.get('description')?.invalid && proForm.get('description')?.touched">
+            Invalid Description
+        </div>
+        </textarea> -->
+        <label for="">Image</label>
+        <input type="file" class="form-control" (change)="uploadImage($event)" required>
+        <div class="text-center">
+            <button class="btn btn-success" [disabled]="proForm.invalid">ADD</button>
+        </div>
+        
+    </form>
+</div>

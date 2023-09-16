@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="card" style="width: 18rem; margin-bottom: 20px; margin: 20px; background-color: rgb(172, 219, 255);" *ngFor="let i of item" >
+        <img src="{{i.product.image}}" height="300px" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{i.product.product_name}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{i.product.price}}</h6>
+            <p class="card-text">{{i.product.category}}</p>
+            <button id="{{i.id}}" (click)="($event)" class="btn btn-info">buynow</button>
+            <button id="{{i.id}}" (click)="deletecar($event)" class="btn btn-danger">delete</button>
+
+        </div>
+    </div>
+</div>

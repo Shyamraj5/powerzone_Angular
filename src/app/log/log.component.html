@@ -1,0 +1,28 @@
+<h1 class="text-center bg-info">login</h1>
+<div class="row">
+<div class="col"></div>
+<div class="col">
+    <form action="" [formGroup]="logForm" (ngSubmit)="submitted()">
+        <div>
+            <label for="">Username</label>
+            <input type="text" formControlName="username"  placeholder="Enter your Username" class="form-control">
+            <div class="alert alert-danger" *ngIf="logForm.get('username')?.invalid && logForm.get('username')?.touched">
+                Enter Valid Username
+            </div>
+        </div>
+        <div>
+            <label for="">Password</label>
+            <input type="password" formControlName="password"  placeholder="Enter your Password" class="form-control">
+            <div class="alert alert-danger" *ngIf="logForm.get('password')?.invalid && logForm.get('password')?.touched">
+                Enter Valid Password
+            </div>
+        </div>        <div class="text-center mt-3">
+            <button class="btn btn-success">Login</button><br>
+            New User? <a routerLink="reg">Sign Up Here...</a>
+        </div>
+    </form>
+</div>
+<div class="col"></div>
+</div>
+
+

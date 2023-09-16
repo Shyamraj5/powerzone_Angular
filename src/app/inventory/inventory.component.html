@@ -1,0 +1,42 @@
+<p>inventory works!</p>
+<div class="container mt-5">
+<form [formGroup]="inventory" (ngSubmit)="submited()">
+    <div class="form-group">
+        <label for="product-name">Product Name:</label>
+        <input type="text" class="form-control"formControlName="product" required >
+    </div>
+    <div class="form-group">
+        <label for="stock-quantity">Stock Quantity:</label>
+        <input type="text" class="form-control"formControlName="stock_quantity" required>
+    </div>
+    <div class="form-group">
+        <label for="sold-quantity">Sold Quantity:</label>
+        <input type="text" class="form-control"  formControlName="sold_quantity" required>
+    </div>
+    <div>
+        <button  class="btn btn-primary">Add Product</button>
+    </div>
+    
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Stock Quantity</th>
+            <th>Sold Quantity</th>
+            <th>reminding Quantity</th>
+        </tr>
+    </thead>
+    <tbody id="inventory-table"*ngFor="let i of stock">
+        <td>{{i.product}}</td>
+        <td>{{i.stock_quantity}}</td>
+        <td class="align-middle">{{i.sold_quantity}}</td>
+        <td class="align-middle">{{i.remaining_quantity}}</td>
+        <div>
+            <button  id="{{i.id}}" class="btn btn-info " (click)="editsStock($event)">  edit</button>
+        </div>
+    </tbody>
+   
+</table>
+</div>
