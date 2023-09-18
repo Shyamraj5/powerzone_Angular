@@ -15,6 +15,9 @@ import { AddComponent } from './add/add.component';
 import { EditComponent } from './edit/edit.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { StockEComponent } from './stock-e/stock-e.component';
+import { ViewcomplComponent } from './viewcompl/viewcompl.component';
+import { OrdersComponent } from './orders/orders.component';
+
 
 
 
@@ -32,6 +35,9 @@ import { StockEComponent } from './stock-e/stock-e.component';
     EditComponent,
     InventoryComponent,
     StockEComponent,
+    ViewcomplComponent,
+    OrdersComponent,
+    
     
     
     

@@ -11,6 +11,8 @@ import { AddComponent } from './add/add.component';
 import { EditComponent } from './edit/edit.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { StockEComponent } from './stock-e/stock-e.component';
+import { ViewcomplComponent } from './viewcompl/viewcompl.component';
+import { OrdersComponent } from './orders/orders.component';
 const routes: Routes = [
   {path:'reg',component:RegComponent},
   {path:'home',component:HomeComponent},
@@ -22,7 +24,10 @@ const routes: Routes = [
   {path:'add',component:AddComponent},
   {path:'inventory',component:InventoryComponent},
   {path:'edit/:id',component:EditComponent},
-  {path:'stockedit/:id',component:StockEComponent}
+  {path:'stockedit/:id',component:StockEComponent},
+  {path:'viewcomp',component:ViewcomplComponent},
+  {path:'order',component:OrdersComponent},
+
 ];
 
 @NgModule({

@@ -26,7 +26,10 @@ export class HomeComponent {
 
  }
 
-
+ logout(){
+  localStorage.clear()
+  this.r.navigate([''])
+}
 
 
   
