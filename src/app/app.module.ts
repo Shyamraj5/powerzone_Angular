@@ -17,6 +17,8 @@ import { InventoryComponent } from './inventory/inventory.component';
 import { StockEComponent } from './stock-e/stock-e.component';
 import { ViewcomplComponent } from './viewcompl/viewcompl.component';
 import { OrdersComponent } from './orders/orders.component';
+import { OrdernowComponent } from './ordernow/ordernow.component';
+import { AdminvserviceComponent } from './adminvservice/adminvservice.component';
 
 
 
@@ -37,6 +39,8 @@ import { OrdersComponent } from './orders/orders.component';
     StockEComponent,
     ViewcomplComponent,
     OrdersComponent,
+    OrdernowComponent,
+    AdminvserviceComponent,
     
     
     

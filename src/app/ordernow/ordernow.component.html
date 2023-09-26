@@ -1,0 +1,21 @@
+<p>ordernow works!</p>
+<form id="order-form" method="post" [formGroup]="orders">
+    <label for="address">Shipping Address:</label>
+    <input type="text" id="address" class="form-control" formControlName="address" >
+    <label for="address">landmark:</label>
+    <input type="text" id="address" class="form-control" formControlName="landmark" >
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" class="form-control" name="phone" formControlName="phone" >
+    <!-- <label for="">payment method</label> -->
+    <!-- <select name="" formControlName="payment" id="">
+        <option value="cash on delivery">cash on delivery</option>
+        <option value="pay on delivery">pay on delivery</option>
+        
+        
+    </select> -->
+    <label for="quantity">Quantity:</label>
+    <input type="text" id="quantity" class="form-control" formControlName="quantity" >
+    <button  (click)="submitted()" class="btn btn-info">buynow</button>
+
+    
+</form>

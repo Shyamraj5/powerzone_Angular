@@ -31,6 +31,9 @@ export class HomeComponent {
   this.r.navigate([''])
 }
 
+orderss(e:any){
+  this.r.navigate(['ordernow',e.target.id])
+}
 
   
 }

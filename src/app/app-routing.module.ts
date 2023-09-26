@@ -13,6 +13,8 @@ import { InventoryComponent } from './inventory/inventory.component';
 import { StockEComponent } from './stock-e/stock-e.component';
 import { ViewcomplComponent } from './viewcompl/viewcompl.component';
 import { OrdersComponent } from './orders/orders.component';
+import { OrdernowComponent } from './ordernow/ordernow.component';
+import { AdminvserviceComponent } from './adminvservice/adminvservice.component';
 const routes: Routes = [
   {path:'reg',component:RegComponent},
   {path:'home',component:HomeComponent},
@@ -27,6 +29,8 @@ const routes: Routes = [
   {path:'stockedit/:id',component:StockEComponent},
   {path:'viewcomp',component:ViewcomplComponent},
   {path:'order',component:OrdersComponent},
+  {path:'ordernow/:id',component:OrdernowComponent},
+  {path:'allser',component:AdminvserviceComponent}
 
 ];
 

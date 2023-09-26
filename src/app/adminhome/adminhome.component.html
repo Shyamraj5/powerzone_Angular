@@ -7,25 +7,25 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-        <a class="navbar-brand" href="#">powerzone</a>
+        <a class="navbar-brand" href="#"><h2 class="primary">powerhouse</h2></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/inventory">manage stocks</a>
+                    <a class="nav-link" routerLink="/inventory"><h4>manage stocks</h4></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/add"> add Products</a>
+                    <a class="nav-link" routerLink="/add"> <h4>add Products</h4></a>
                 </li>
               
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/viewcomp">view  complaint</a>
+                    <a class="nav-link" routerLink="/viewcomp"><h4>view  complaint</h4></a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/services">view service</a>
+                    <a class="nav-link" routerLink="/allser"><h4>view service</h4></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" ><button class="btn btn-lg btn-danger float-right" (click)="logout()">LogOut</button></a>
@@ -77,7 +77,10 @@ body {
 .card:hover {
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
 }
-
+.navbar{
+    height: 10vh;
+    
+}
 
 /**
 * DATE
@@ -254,8 +257,8 @@ body {
             <div class="card__body">
                 <div class="card__category"><a href="#">{{i.category}}</a></div>
                 <h2 class="card__title"><a href="#">{{i.product_name}}</a></h2>
-                <div class="card__subtitle">an ice cream sundae party！</div>
-                <p class="card__description">5. Pour the mixture into a non-stick container and then freeze overnight. Take treating your dog a step further by turning it into an ice cream sundae party!</p>
+                <div class="card__subtitle">{{i.category}}</div>
+                <p class="card__description">{{i.description}}</p>
             </div>
             <div class="text-center">
                 <button class="btn btn-danger" id="{{i.id}}" (click)="deletepro($event)" >Remove</button>

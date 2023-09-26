@@ -2,16 +2,17 @@ import { Component } from '@angular/core';
 import { DataService } from '../services/data.service';
 import { Router } from '@angular/router';
 import { FormBuilder,Validators } from '@angular/forms';
-
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent {
-
+  pid:any;
   item:any=[]
-  constructor(private ds:DataService,private r:Router,private fb:FormBuilder){
+  constructor(private ds:DataService,private r:Router,private fb:FormBuilder,private ar:ActivatedRoute){
+    this.ar.params.subscribe(res=>this.pid=res['id'])
     this.ds.getcart().then(res=>res.json()).then(res=>this.item=res)
     console.log(this.item)
    
@@ -20,18 +21,16 @@ export class CartComponent {
     quantity:['',[Validators.required]],
     address:['',[Validators.required]],
     phone:['',[Validators.required]],
-    landmark:['',[Validators.required]],
-    category:['',[Validators.required]],
-    payment:['',[Validators.required]],
+    
   })
 
   orders(e:any){
+  let product=e.target.id.value
   let quantity=this.order.controls.quantity.value
   let address=this.order.controls.address.value
   let phone=this.order.controls.phone.value
-  let landmark=this.order.controls.landmark.value
-  let payment=this.order.controls.payment.value
-    this.ds.order(e.target.id,quantity,address,phone,landmark,payment).then(res=>res.json()).then(res=>{
+ 
+    this.ds.order(product,quantity,address,phone).then(res=>res.json()).then(res=>{
       console.log(res)
 
     })

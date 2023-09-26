@@ -52,20 +52,7 @@ getProduct(){
 
 
 
-addtocart(product:any){
-  let data={
-    
-    product
-  }
-  return fetch(`http://127.0.0.1:8000/owner/cart/`, {
-    method: 'post',
-    body: JSON.stringify(data),
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-      'Authorization':`Token ${localStorage.getItem('token')}`
-    },
-  })
-}
+
 
 getcart(){
   
@@ -164,6 +151,19 @@ comp(complaint:any,place:any,phone:any){
     })
     
       }
+      getallservice(){
+  
+        return fetch('http://127.0.0.1:8000/owner/getallser/', {
+        method: 'GET',
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+          'Authorization':`Token ${localStorage.getItem('token')}`
+        },
+      })
+      
+        }
+
+
       addProduct(data:any){
         return fetch('http://127.0.0.1:8000/owner/cp/', {
           method: 'POST',
@@ -265,17 +265,30 @@ inv(product:any,stock_quantity:any,sold_quantity:any){
           })
         }
 
-
+        addtocart(product:any){
+          let data={
+            
+            product
+          }
+          return fetch(`http://127.0.0.1:8000/owner/cart/`, {
+            method: 'post',
+            body: JSON.stringify(data),
+            headers: {
+              'Content-type': 'application/json; charset=UTF-8',
+              'Authorization':`Token ${localStorage.getItem('token')}`
+            },
+          })
+        }
  
 
-        order(product:any,quantity:any,address:any,phone:any,landmark:any,payment:any){
+        order(product:any,quantity:any,address:any,phone:any){
           let data={
             
             product,
             quantity,
             address,
             phone,
-            landmark
+           
           }
           return fetch(`http://127.0.0.1:8000/owner/cpurchace/`, {
             method: 'post',
@@ -291,14 +304,23 @@ inv(product:any,stock_quantity:any,sold_quantity:any){
 
         getorders(){
   
-          return fetch('http://127.0.0.1:8000/owner/cpurchace/', {
+          return fetch('http://127.0.0.1:8000/owner/getorder/', {
           method: 'GET',
           headers: {
             'Content-type': 'application/json; charset=UTF-8',
             'Authorization':`Token ${localStorage.getItem('token')}`
+            
           },
         })
         
           }      
-  
+          deleteorder(id:any){
+            return fetch(`http://127.0.0.1:8000/owner/cpurchace/${id}/`, {
+              method: 'DELETE',
+              headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+                'Authorization':`Token ${localStorage.getItem('token')}`
+              },
+            })
+          }
 }

@@ -22,7 +22,7 @@ export class EditComponent {
         product_name:[`${res.product_name}`,Validators.required],
         price:[`${res.price}`,Validators.required],
         category:[`${res.category}`,Validators.required],
-        // description:[`${res.product_description}`,Validators.required],
+        description:[`${res.product_description}`,Validators.required],
       })
       this.getpro(res)
     })
@@ -34,7 +34,7 @@ export class EditComponent {
     product_name:['',Validators.required],
     price:['',Validators.required],
     category:['',Validators.required],
-    // description:['',Validators.required],
+    description:['',Validators.required],
   })
   uploadImage(e:any){
     this.file=e.target.files[0]
@@ -44,13 +44,13 @@ export class EditComponent {
     let product_name:any=this.addForm.controls.product_name.value
     let price:any=this.addForm.controls.price.value
     let category:any=this.addForm.controls.category.value
-    // let desc:any=this.addForm.controls.description.value
+    let description:any=this.addForm.controls.description.value
 
     let formd=new FormData()
     formd.append('product_name',product_name)
     formd.append('price',price)
     formd.append('category',category)
-    // formd.append('product_description',desc)
+    formd.append('description',description)
     if(this.file){
       formd.append('image',this.file,this.file.name)
     }

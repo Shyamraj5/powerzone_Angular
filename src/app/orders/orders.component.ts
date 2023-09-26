@@ -15,5 +15,15 @@ export class OrdersComponent {
    
   }
 
-
+  delorder(e:any){
+    let id=e.target.id
+    console.log(id)
+    this.ds.deleteorder(id).then(res=>res.json()).then(res=>{
+      alert("Product Deleted")
+      console.log(res)
+      this.r.navigateByUrl('/',{skipLocationChange:true}).then(()=>{
+        this.r.navigate(['order']);
+      });
+    }).catch(res=>console.log(res.error))
+  }
 }

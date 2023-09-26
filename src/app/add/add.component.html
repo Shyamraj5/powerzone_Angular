@@ -23,12 +23,16 @@
         <div class="alert alert-danger" *ngIf="proForm.get('price')?.invalid && proForm.get('price')?.touched">
             Invalid Price
         </div>
-        <!-- <label for="">Description</label>
+        <label for="">Description</label>
         <textarea class="form-control" formControlName="description" placeholder="Enter Description">
         <div class="alert alert-danger" *ngIf="proForm.get('description')?.invalid && proForm.get('description')?.touched">
             Invalid Description
         </div>
-        </textarea> -->
+        </textarea>
+        <!-- <input type="text" class="form-control" formControlName="description" placeholder="Enter description">
+        <div class="alert alert-danger" *ngIf="proForm.get('description')?.invalid && proForm.get('description')?.touched">
+            Invalid descripton
+        </div> -->
         <label for="">Image</label>
         <input type="file" class="form-control" (change)="uploadImage($event)" required>
         <div class="text-center">

@@ -24,12 +24,12 @@
          <div class="alert alert-danger" *ngIf="addForm.get('price')?.invalid && addForm.get('price')?.touched">
              Invalid Price
          </div>
-         <!-- <label for="">Description</label>
+         <label for="">Description</label>
          <textarea class="form-control"  placeholder="Enter Description" formControlName="description">
             <div class="alert alert-danger" *ngIf="addForm.get('description')?.invalid && addForm.get('description')?.touched">
                 Invalid Price
             </div>
-         </textarea> -->
+         </textarea>
          <label for="">Image</label>
          previous: <img src="{{pro.image}}" height="300px" width="300px" alt="">
          <input type="file" (change)="uploadImage($event)" class="form-control">

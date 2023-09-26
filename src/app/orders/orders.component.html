@@ -92,7 +92,7 @@ z-index: 0
 
 <section class="vh-100 gradient-custom-2">
 
-    <div class="container py-5 h-100" *ngFor="let i of item">
+    <div class="container py-5 h-100" *ngFor="let i of item ">
       <div class="row d-flex justify-content-center align-items-center h-100" >
         <div class="col-md-10 col-lg-8 col-xl-6" >
           <div class="card card-stepper" style="border-radius: 16px;" >
@@ -110,8 +110,8 @@ z-index: 0
             <div class="card-body p-4">
               <div class="d-flex flex-row mb-4 pb-2">
                 <div class="flex-fill">
-                  <h5 class="bold">{{i.product.product_name}}</h5>
-                  <p class="text-muted"> Qt: {{i.quantity}} item</p>
+                  <h5 class="bold">{{i}}</h5>
+                  <p class="text-muted"> Qt: {{i.product.quantity}} item</p>
                   <h4 class="mb-3"> {{i.product.price}} <span class="small text-muted"> via {{i.payment}} </span></h4>
                   <p class="text-muted">Tracking Status on: <span class="text-body">11:30pm, Today</span></p>
                 </div>
@@ -132,7 +132,7 @@ z-index: 0
               <div class="d-flex justify-content-between">
                 <h5 class="fw-normal mb-0"><a href="#!">Track</a></h5>
                 <div class="border-start h-100"></div>
-                <h5 class="fw-normal mb-0"><a href="#!">Cancel</a></h5>
+                <h5 class="fw-normal mb-0">  <button id="{{i.id}}" (click)="delorder($event)" class="btn btn-info">cancel now</button></h5>
                 <div class="border-start h-100"></div>
                 <h5 class="fw-normal mb-0"><a href="#!">Pre-pay</a></h5>
                 <div class="border-start h-100"></div>

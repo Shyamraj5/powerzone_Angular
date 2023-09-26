@@ -16,6 +16,7 @@ export class AddComponent {
     product_name:['',[Validators.required]],
     price:['',[Validators.required]],
     category:['',[Validators.required]],
+    description:['',[Validators.required]],
     
   })
 
@@ -28,13 +29,14 @@ export class AddComponent {
     let n:any=this.proForm.controls.product_name.value
     let p:any=this.proForm.controls.price.value
     let c:any=this.proForm.controls.category.value
-    // let d:any=this.proForm.controls.description.value
+    let d:any=this.proForm.controls.description.value
 
     let formd=new FormData()
     formd.append('product_name',n)
     formd.append('price',p)
     formd.append('category',c)
-    // formd.append('product_description',d)
+    
+    formd.append('description',d)
     formd.append('image',this.file,this.file.name)
 
     this.ds.addProduct(formd).then(res=>res.json()).then(res=>{
