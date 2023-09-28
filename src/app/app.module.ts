@@ -19,6 +19,7 @@ import { ViewcomplComponent } from './viewcompl/viewcompl.component';
 import { OrdersComponent } from './orders/orders.component';
 import { OrdernowComponent } from './ordernow/ordernow.component';
 import { AdminvserviceComponent } from './adminvservice/adminvservice.component';
+import { AllorderComponent } from './allorder/allorder.component';
 
 
 
@@ -41,6 +42,7 @@ import { AdminvserviceComponent } from './adminvservice/adminvservice.component'
     OrdersComponent,
     OrdernowComponent,
     AdminvserviceComponent,
+    AllorderComponent,
     
     
     

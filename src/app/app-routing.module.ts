@@ -15,6 +15,7 @@ import { ViewcomplComponent } from './viewcompl/viewcompl.component';
 import { OrdersComponent } from './orders/orders.component';
 import { OrdernowComponent } from './ordernow/ordernow.component';
 import { AdminvserviceComponent } from './adminvservice/adminvservice.component';
+import { AllorderComponent } from './allorder/allorder.component';
 const routes: Routes = [
   {path:'reg',component:RegComponent},
   {path:'home',component:HomeComponent},
@@ -30,7 +31,8 @@ const routes: Routes = [
   {path:'viewcomp',component:ViewcomplComponent},
   {path:'order',component:OrdersComponent},
   {path:'ordernow/:id',component:OrdernowComponent},
-  {path:'allser',component:AdminvserviceComponent}
+  {path:'allser',component:AdminvserviceComponent},
+  {path:'allorder',component:AllorderComponent},
 
 ];
 

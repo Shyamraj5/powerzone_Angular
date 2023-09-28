@@ -33,9 +33,9 @@ orders=this.fb.group({
   quantity:['',[Validators.required]],
   address:['',[Validators.required]],
   phone:['',[Validators.required]],
-  // landmark:['',[Validators.required]],
+  landmark:['',[Validators.required]],
   
-  // payment:['',[Validators.required]],
+  payment:['',[Validators.required]],
 })
 
 submitted(){
@@ -43,16 +43,27 @@ let product=this.pid
 let quantity:any=this.orders.controls.quantity.value
 let address:any=this.orders.controls.address.value
 let phone:any=this.orders.controls.phone.value
-// let landmark:any=this.orders.controls.landmark.value
-// let payment:any=this.orders.controls.payment.value
+let landmark:any=this.orders.controls.landmark.value
+let payment:any=this.orders.controls.payment.value
 
 
 
 
-this.ds.order(product,quantity,address,phone).then(res=>res.json).then(res=>{
+this.ds.order(product,quantity,address,phone,landmark,payment).then(res=>res.json).then(res=>{
   alert("Update")
   this.r.navigate(['order'])
 })
 
+}
+quantity: number = 0;
+
+incrementQuantity() {
+  this.quantity++;
+}
+
+decrementQuantity() {
+  if (this.quantity > 0) {
+    this.quantity--;
+  }
 }
 }

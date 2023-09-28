@@ -1,0 +1,25 @@
+<p>allorder works!</p>
+<table class="table text-black mb-0">
+    <thead>
+      <tr>
+        <th scope="col">product</th>
+        <th scope="col">address</th>
+        <th scope="col">landmark</th>
+        <th scope="col">phone</th>
+        <th scope="col">payment</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="fw-normal" *ngFor="let i of allor">
+        <th>{{i.product}}</th>
+        
+        <td class="align-middle">{{i.address}}</td>
+        <td class="align-middle">{{i.landmark}}</td>
+        <td class="align-middle">
+        {{i.phone}}
+        </td>
+        <td>{{i.payment}}
+        </td>
+      </tr>
+    </tbody>
+  </table>

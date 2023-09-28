@@ -8,10 +8,13 @@ import { Router } from '@angular/router';
 })
 export class AdminhomeComponent {
   prod:any=[]
+  
   constructor(private ds:DataService,private r:Router){
     this.ds.getProduct().then(res=>res.json()).then(res=>this.prod=res)
     console.log(this.prod)
     
+    
+   
   }
   deletepro(e:any){
     let id=e.target.id

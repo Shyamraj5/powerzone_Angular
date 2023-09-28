@@ -281,13 +281,14 @@ inv(product:any,stock_quantity:any,sold_quantity:any){
         }
  
 
-        order(product:any,quantity:any,address:any,phone:any){
+        order(product:any,quantity:any,address:any,phone:any,landmark:any,payment:any){
           let data={
             
             product,
             quantity,
             address,
             phone,
+            landmark
            
           }
           return fetch(`http://127.0.0.1:8000/owner/cpurchace/`, {
@@ -299,6 +300,27 @@ inv(product:any,stock_quantity:any,sold_quantity:any){
             },
           })
         }
+        
+        cartorder(product:any,quantity:any,address:any,phone:any,landmark:any,payment:any){
+          let data={
+            
+            product,
+            quantity,
+            address,
+            phone,
+            landmark
+           
+          }
+          return fetch(`http://127.0.0.1:8000/owner/getorder/`, {
+            method: 'post',
+            body: JSON.stringify(data),
+            headers: {
+              'Content-type': 'application/json; charset=UTF-8',
+              'Authorization':`Token ${localStorage.getItem('token')}`
+            },
+          })
+        }
+
 
 
 
@@ -323,4 +345,16 @@ inv(product:any,stock_quantity:any,sold_quantity:any){
               },
             })
           }
+          getallorders(){
+  
+            return fetch('http://127.0.0.1:8000/owner/cpurchace/', {
+            method: 'GET',
+            headers: {
+              'Content-type': 'application/json; charset=UTF-8',
+              'Authorization':`Token ${localStorage.getItem('token')}`
+              
+            },
+          })
+          
+            }  
 }

@@ -15,22 +15,27 @@ export class CartComponent {
     this.ar.params.subscribe(res=>this.pid=res['id'])
     this.ds.getcart().then(res=>res.json()).then(res=>this.item=res)
     console.log(this.item)
+
    
   }
   order=this.fb.group({
     quantity:['',[Validators.required]],
     address:['',[Validators.required]],
     phone:['',[Validators.required]],
+    landmark:['',[Validators.required]],
+    payment:['',[Validators.required]],
     
   })
 
-  orders(e:any){
-  let product=e.target.id.value
+  orders(){
+  let product=this.pid
   let quantity=this.order.controls.quantity.value
   let address=this.order.controls.address.value
   let phone=this.order.controls.phone.value
+  let landmark=this.order.controls.phone.value
+  let payment=this.order.controls.payment.value
  
-    this.ds.order(product,quantity,address,phone).then(res=>res.json()).then(res=>{
+    this.ds.cartorder(product,quantity,address,phone,landmark,payment).then(res=>res.json()).then(res=>{
       console.log(res)
 
     })
@@ -47,6 +52,7 @@ export class CartComponent {
       });
     }).catch(res=>console.log(res.error))
   }
+ 
   
   
 }
