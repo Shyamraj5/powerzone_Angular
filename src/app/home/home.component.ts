@@ -1,7 +1,7 @@
 
 import { Component } from '@angular/core';
 import { DataService } from '../services/data.service';
-
+import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
@@ -11,11 +11,42 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent {
   pro:any=[]
-  constructor(private ds:DataService,private r:Router){
+  counts:any=[]
+  
+  constructor(private ds:DataService,private r:Router,private ar:ActivatedRoute){
     this.ds.getProduct().then(res=>res.json()).then(res=>this.pro=res)
     console.log(this.pro)
+
+    this.ds.countnoti().then(res=>res.json()).then(res=>this.counts=res)
+    
+    console.log(this.counts)
+    
+    
   }
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  cart(e:any){
   this.ds.addtocart(e.target.id).then(res=>res.json()).then(res=>{
     console.log(res)

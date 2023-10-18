@@ -110,7 +110,7 @@ comp(complaint:any,place:any,phone:any){
     }
     getallcomp(){
 
-      return fetch('http://127.0.0.1:8000/owner/viewcompl/', {
+      return fetch('http://127.0.0.1:8000/owner/getallcomp/', {
       method: 'GET',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -356,5 +356,68 @@ inv(product:any,stock_quantity:any,sold_quantity:any){
             },
           })
           
-            }  
+            } 
+            
+            getspec_ser(id:any){
+              return fetch(`http://127.0.0.1:8000/owner/getallser/${id}/`, {
+                method: 'GET',
+                headers: {
+                  'Content-type': 'application/json; charset=UTF-8',
+                  'Authorization':`Token ${localStorage.getItem('token')}`
+                },
+              })
+            }
+            sndmsg(service:any,response:any){
+              let data={
+                
+                service,
+                response
+              }
+              return fetch(`http://127.0.0.1:8000/owner/adminresponce/`, {
+                method: 'post',
+                body: JSON.stringify(data),
+                headers: {
+                  'Content-type': 'application/json; charset=UTF-8',
+                  'Authorization':`Token ${localStorage.getItem('token')}`
+                },
+              })
+            }
+            notifi(){
+  
+              return fetch('http://127.0.0.1:8000/owner/adminresponce/', {
+              method: 'GET',
+              headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+                'Authorization':`Token ${localStorage.getItem('token')}`
+                
+              },
+            })
+            
+              }  
+
+
+              deltnotifi(id:any){
+                return fetch(`http://127.0.0.1:8000/owner/adminresponce/${id}/`, {
+                  method: 'DELETE',
+                  headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                    'Authorization':`Token ${localStorage.getItem('token')}`
+                  },
+                })
+              }
+
+
+              countnoti(){
+  
+                return fetch('http://127.0.0.1:8000/owner/countnoti/unread_count/', {
+                method: 'GET',
+                headers: {
+                  'Content-type': 'application/json; charset=UTF-8',
+                  'Authorization':`Token ${localStorage.getItem('token')}`
+                  
+                },
+              })
+              
+                }  
+            
 }

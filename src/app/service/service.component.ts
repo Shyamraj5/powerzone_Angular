@@ -12,6 +12,7 @@ export class ServiceComponent {
 constructor(private fb:FormBuilder,private ds:DataService,private r:Router){
   this.ds.getser().then(res=>res.json()).then(res=>this.data=res)
   
+  
 }
 
 servi=this.fb.group({
@@ -28,6 +29,8 @@ submitt(){
     console.log(res)
     this.r.navigate(['services']);
   })
+
+
 
 }
 }

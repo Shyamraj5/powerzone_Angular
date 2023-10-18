@@ -23,13 +23,18 @@ body {
    
     
     
+    margin-bottom: 20px;
+    margin-right: 40px;
+    margin-top: 10px;
+    margin-left: 20;
     width: 370px;
-    padding-right: 30px;
+    
     background-color: #fff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     -webkit-transition: box-shadow 0.5s;
     transition: box-shadow 0.5s;
+
 }
 
 .card a {
@@ -46,20 +51,7 @@ body {
 * DATE
 **/
 
-.card__date {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 45px;
-    height: 45px;
-    padding-top: 10px;
-    background-color: coral;
-    border-radius: 50%;
-    color: #fff;
-    text-align: center;
-    font-weight: 700;
-    line-height: 13px;
-}
+
 
 .card__date__day {
     font-size: 14px;

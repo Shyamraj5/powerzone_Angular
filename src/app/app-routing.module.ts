@@ -16,6 +16,8 @@ import { OrdersComponent } from './orders/orders.component';
 import { OrdernowComponent } from './ordernow/ordernow.component';
 import { AdminvserviceComponent } from './adminvservice/adminvservice.component';
 import { AllorderComponent } from './allorder/allorder.component';
+import { SndmsgComponent } from './sndmsg/sndmsg.component';
+import { MsgsComponent } from './msgs/msgs.component';
 const routes: Routes = [
   {path:'reg',component:RegComponent},
   {path:'home',component:HomeComponent},
@@ -33,6 +35,9 @@ const routes: Routes = [
   {path:'ordernow/:id',component:OrdernowComponent},
   {path:'allser',component:AdminvserviceComponent},
   {path:'allorder',component:AllorderComponent},
+  {path:'sndmsg/:id',component:SndmsgComponent},
+  {path:'msgs',component:MsgsComponent},
+
 
 ];
 

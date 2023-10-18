@@ -19,10 +19,9 @@
         <th>{{i.service}}</th>
         <td class="align-middle">{{i.phone}}</td>
         <td class="align-middle">{{i.place}}</td>
-        <td class="align-middle">
-          <button id="{{i.id}}" class="btn btn-warning">Edit</button>&nbsp;
-          <button id="{{i.id}}"  class="btn btn-danger">Delete</button>
-        </td>
+        <div>
+          <button  id="{{i.id}}" class="btn btn-info " (click)="sendmsg($event)">select msg</button>
+      </div>
       </tr>
     </tbody>
   </table>

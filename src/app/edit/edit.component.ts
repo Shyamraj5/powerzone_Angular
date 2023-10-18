@@ -22,7 +22,7 @@ export class EditComponent {
         product_name:[`${res.product_name}`,Validators.required],
         price:[`${res.price}`,Validators.required],
         category:[`${res.category}`,Validators.required],
-        description:[`${res.product_description}`,Validators.required],
+        description:[`${res.description}`,Validators.required],
       })
       this.getpro(res)
     })

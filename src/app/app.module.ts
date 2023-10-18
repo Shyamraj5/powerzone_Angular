@@ -20,6 +20,8 @@ import { OrdersComponent } from './orders/orders.component';
 import { OrdernowComponent } from './ordernow/ordernow.component';
 import { AdminvserviceComponent } from './adminvservice/adminvservice.component';
 import { AllorderComponent } from './allorder/allorder.component';
+import { SndmsgComponent } from './sndmsg/sndmsg.component';
+import { MsgsComponent } from './msgs/msgs.component';
 
 
 
@@ -43,6 +45,8 @@ import { AllorderComponent } from './allorder/allorder.component';
     OrdernowComponent,
     AdminvserviceComponent,
     AllorderComponent,
+    SndmsgComponent,
+    MsgsComponent,
     
     
     

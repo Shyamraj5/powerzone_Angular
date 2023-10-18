@@ -1,0 +1,17 @@
+<p>sndmsg works!</p>
+<form action=""  [formGroup]="res" (ngSubmit)="submitted()">
+<select name="" formControlName="response" class="form-control">
+    <option value="thank you for your response">thank you for your response</option>
+    <option value="service engineer on the way">service engineer on the way</option>
+    <option value="having some delay come after a day">having some delay come after a day</option>
+    
+</select>
+<!-- <div class="alert alert-danger" *ngIf="res.get('category')?.invalid && res.get('category')?.touched">
+    Invalid Category
+</div> -->
+
+<button  (click)="submitted()" class="btn btn-info">send</button>
+
+
+</form>
+

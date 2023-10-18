@@ -1,7 +1,7 @@
-<style>
-
+<div >
     
-</style>
+     
+ </div>         
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
@@ -30,6 +30,20 @@
                     <li class="nav-item">
                         <a class="nav-link" routerLink="/services">give service</a>
                     </li>
+                    <style>
+                          .round-element {
+                                       
+                                        background-color: white;
+                                        border-radius: 50%;
+                                        text-align: center;
+                                       
+                                        color: red;
+                                        font-weight: bold;
+                                         }
+                    </style>
+                    <li class="nav-item bg-rounted">
+                        <a class="nav-link" routerLink="/msgs">notifications <b class="round-element">{{counts}}</b></a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" ><button class="btn btn-lg btn-danger float-right" (click)="logout()">LogOut</button></a>
                     </li>
@@ -49,7 +63,7 @@
 
     <!-- Product Listing -->
     <div class="row fa-border bg-dark mt-5">
-        
+      
         <div class="card " *ngFor="let i of pro">
             <header class="card__thumb">
                 <a href="#"><img src="{{i.image}}" height="400px"/></a>
@@ -57,7 +71,8 @@
             <div class="card__body">
                 <div class="card__category"><a href="#">{{i.category}}</a></div>
                 <h2 class="card__title"><a href="#">{{i.product_name}}</a></h2>
-                <div class="card__subtitle">！</div>
+                <h2 class="card__title"><a href="#">{{i.price|currency:'INR'}} </a></h2>
+                <div class="card__subtitle"></div>
                 <p class="card__description">{{i.description}}</p>
             </div>
             <div class="text-center">

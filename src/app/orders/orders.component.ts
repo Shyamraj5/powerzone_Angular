@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { DataService } from '../services/data.service';
 import { Router } from '@angular/router';
 import { FormBuilder } from '@angular/forms';
+import orders from 'razorpay/dist/types/orders';
+import { OrdernowComponent } from '../ordernow/ordernow.component';
 @Component({
   selector: 'app-orders',
   templateUrl: './orders.component.html',
@@ -26,4 +28,9 @@ export class OrdersComponent {
       });
     }).catch(res=>console.log(res.error))
   }
+
+
+
+
+  
 }
