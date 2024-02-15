@@ -22,6 +22,7 @@ import { AdminvserviceComponent } from './adminvservice/adminvservice.component'
 import { AllorderComponent } from './allorder/allorder.component';
 import { SndmsgComponent } from './sndmsg/sndmsg.component';
 import { MsgsComponent } from './msgs/msgs.component';
+import { HiiComponent } from './hii/hii.component';
 
 
 
@@ -47,6 +48,7 @@ import { MsgsComponent } from './msgs/msgs.component';
     AllorderComponent,
     SndmsgComponent,
     MsgsComponent,
+    HiiComponent,
     
     
     

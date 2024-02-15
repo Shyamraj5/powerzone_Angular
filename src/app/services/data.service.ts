@@ -409,7 +409,7 @@ inv(product:any,stock_quantity:any,sold_quantity:any){
 
               countnoti(){
   
-                return fetch('http://127.0.0.1:8000/owner/countnoti/unread_count/', {
+                return fetch('http://127.0.0.1:8000/owner/adminresponce/counts/', {
                 method: 'GET',
                 headers: {
                   'Content-type': 'application/json; charset=UTF-8',

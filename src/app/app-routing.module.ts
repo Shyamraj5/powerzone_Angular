@@ -18,6 +18,7 @@ import { AdminvserviceComponent } from './adminvservice/adminvservice.component'
 import { AllorderComponent } from './allorder/allorder.component';
 import { SndmsgComponent } from './sndmsg/sndmsg.component';
 import { MsgsComponent } from './msgs/msgs.component';
+import { HiiComponent } from './hii/hii.component';
 const routes: Routes = [
   {path:'reg',component:RegComponent},
   {path:'home',component:HomeComponent},
@@ -37,6 +38,7 @@ const routes: Routes = [
   {path:'allorder',component:AllorderComponent},
   {path:'sndmsg/:id',component:SndmsgComponent},
   {path:'msgs',component:MsgsComponent},
+  {path:'hi',component:HiiComponent}
 
 
 ];

@@ -10,6 +10,7 @@ export class MsgsComponent {
   msgs:any=[]
   constructor(private ds:DataService,private r:Router){
     this.ds.notifi().then(res=>res.json()).then(res=>this.msgs=res)
+    console.log(this.msgs)
     
    
   }
